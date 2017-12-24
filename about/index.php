@@ -45,7 +45,7 @@
 <body>
 
 <!-- ===================HEADER========================== -->
-<?php require_once("../header/header.php"); ?>
+<?php require_once(__DIR__ . "/../header/header.php"); ?>
 <!-- ===================HEADER========================== -->
   
     <div class="container-fluid text-center all-content">    
