@@ -47,13 +47,13 @@ html, body{
     <div class="collapse navbar-collapse" id="myNavbar">
 
       <ul id="menu-items" class="nav navbar-nav">
-        <li><?php echo "<a href='https://" . $root_address . "/'>Home</a>";?></li>
-        <li><?php echo "<a href='https://" . $root_address . "/about/'>About</a>";?></li>
-        <li><?php echo "<a href='https://" . $root_address . "/contact_us/'>Contact Us</a>";?></li>
+        <li><?php echo "<a href='http://" . $root_address . "/'>Home</a>";?></li>
+        <li><?php echo "<a href='http://" . $root_address . "/about/'>About</a>";?></li>
+        <li><?php echo "<a href='http://" . $root_address . "/contact_us/'>Contact Us</a>";?></li>
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="<?php echo 'https://' . $root_address . '/login/login.php'; ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="<?php echo 'http://' . $root_address . '/login/login.php'; ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
 
     </div>
