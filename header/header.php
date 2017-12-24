@@ -5,7 +5,6 @@
     //Include bootstrap
     require_once(__DIR__ . "/../include/include-bootstrap.php");
 ?>
-<script src= "<?php echo "https://" . $root_address . "/header/header-functions.js" ?>"></script>
 
 <style>
 /* Remove the navbar's default margin-bottom and rounded borders */ 
