@@ -1,7 +1,12 @@
 <?php
     /* Root Address */
-    $root_address = $_SERVER['SERVER_NAME'] . "/public_html/";
+    $root_address = $_SERVER['SERVER_NAME'] . "/PhiKappaPsi/";
+    //add "/public_html/ at the end while in production"
+    //Include bootstrap
+    require_once(__DIR__ . "\\..\\include\\include-bootstrap.php");
 ?>
+<script src= "<?php echo "https://" . $root_address . "header/header-functions.js" ?>"></script>
+
 <style>
 /* Remove the navbar's default margin-bottom and rounded borders */ 
 .navbar {
@@ -21,6 +26,10 @@
       
 }
 
+html, body{
+  height: 100%;
+}
+
 </style>
 
 <nav class="navbar navbar-inverse">
@@ -38,15 +47,18 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
 
-      <ul class="nav navbar-nav">
-        <li class="active"><?php echo "<a href='https://" . $root_address . "'>Home</a>";?></li>
-        <li><?php echo "<a href='https://" . $root_address . "about/'>About</a>";?></li>
-        <li><?php echo "<a href='https://" . $root_address . "contact_us/'>Contact Us</a>";?></li>
-        <li><?php echo "<a href='https://" . $root_address . "current_members/'>Current Members</a>";?></li>
+      <ul id="menu-items" class="nav navbar-nav">
+        <li onclick="ToggleHighlightedTab(0)"><?php echo "<a href='https://" . $root_address . "'>Home</a>";?></li>
+        <li onclick="ToggleHighlightedTab(1)"><?php echo "<a href='https://" . $root_address . "about/'>About</a>";?></li>
+        <li onclick="ToggleHighlightedTab(2)"><?php echo "<a href='https://" . $root_address . "contact_us/'>Contact Us</a>";?></li>
+        <!--
+        <li onclick="ToggleHighlightedTab(3)"><?php /* echo "<a href='https://" . $root_address . "current_members/'>Current Members</a>";*/?></li>
+        -->
       </ul>
+      <script>SwitchActiveClass();</script>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <li><a href="<?php echo 'https://' . $root_address . 'login/login.php'; ?>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
       </ul>
 
     </div>
