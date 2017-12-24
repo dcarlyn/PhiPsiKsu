@@ -1,6 +1,6 @@
 <?php
     /* Root Address */
-    $root_address = $_SERVER['SERVER_NAME'];
+    $root_address = $_SERVER['SERVER_NAME'] . "/";
     //add "/public_html/ at the end while in production"
     //Include bootstrap
     require_once(__DIR__ . "/../include/include-bootstrap.php");
