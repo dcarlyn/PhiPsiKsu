@@ -1,6 +1,6 @@
 <?php
     /* Root Address */
-    $root_address = $_SERVER['SERVER_NAME'] . "/";
+    $root_address = $_SERVER['SERVER_NAME'];
     //add "/public_html/ at the end while in production"
     //Include bootstrap
     require_once(__DIR__ . "/../include/include-bootstrap.php");
@@ -49,8 +49,8 @@ html, body{
 
       <ul id="menu-items" class="nav navbar-nav">
         <li onclick="ToggleHighlightedTab(0)"><?php echo "<a href='https://" . $root_address . "'>Home</a>";?></li>
-        <li onclick="ToggleHighlightedTab(1)"><?php echo "<a href='https://" . $root_address . "about/'>About</a>";?></li>
-        <li onclick="ToggleHighlightedTab(2)"><?php echo "<a href='https://" . $root_address . "contact_us/'>Contact Us</a>";?></li>
+        <li onclick="ToggleHighlightedTab(1)"><?php echo "<a href='https://" . $root_address . "/about/'>About</a>";?></li>
+        <li onclick="ToggleHighlightedTab(2)"><?php echo "<a href='https://" . $root_address . "/contact_us/'>Contact Us</a>";?></li>
         <!--
         <li onclick="ToggleHighlightedTab(3)"><?php /* echo "<a href='https://" . $root_address . "current_members/'>Current Members</a>";*/?></li>
         -->
