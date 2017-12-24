@@ -47,12 +47,9 @@ html, body{
     <div class="collapse navbar-collapse" id="myNavbar">
 
       <ul id="menu-items" class="nav navbar-nav">
-        <li><?php echo "<a href='https://" . $root_address . "'>Home</a>";?></li>
+        <li><?php echo "<a href='https://" . $root_address . "/'>Home</a>";?></li>
         <li><?php echo "<a href='https://" . $root_address . "/about/'>About</a>";?></li>
         <li><?php echo "<a href='https://" . $root_address . "/contact_us/'>Contact Us</a>";?></li>
-        <!--
-        <li onclick="ToggleHighlightedTab(3)"><?php /* echo "<a href='https://" . $root_address . "current_members/'>Current Members</a>";*/?></li>
-        -->
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
