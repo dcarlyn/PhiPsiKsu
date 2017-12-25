@@ -1,6 +1,6 @@
 <?php
 	//change path for linux you will have to use / instead of \\
-	require_once(__DIR__ . "\\..\\include\\database-connect.php");
+	require_once(__DIR__ . "/../include/database-connect.php");
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
@@ -140,7 +140,7 @@
 
 		<!-- Change \\ to / in linux -->
 		<!-- ================== HEADER ======================== -->
-		<?php require_once(__DIR__ . "\\..\\header\\header.php"); ?>
+		<?php require_once(__DIR__ . "/../header/header.php"); ?>
 		<!-- ================================================== -->
   
 		<div class="container-fluid text-center">    
@@ -236,7 +236,7 @@
 
 		<!-- Change \\ to / in linux -->
 		<!-- ===================FOOTER========================== -->
-		<?php require_once(__DIR__ . "\\..\\footer\\footer.php");?>
+		<?php require_once(__DIR__ . "/../footer/footer.php");?>
 		<!-- ===================FOOTER========================== -->
 	</body>
 
