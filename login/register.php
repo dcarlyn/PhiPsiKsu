@@ -21,6 +21,8 @@
 		$stmt->execute();
 		$result = $stmt->get_result();
 
+		
+
 		if($result->num_rows > 0)
 		{
 			$is_err = true;
@@ -104,9 +106,12 @@
 		}
 
 		$stmt->close();
+		
+
 	}
 
 	$conn->close();
+
 
 ?>
 
