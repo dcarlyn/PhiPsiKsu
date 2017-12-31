@@ -172,7 +172,7 @@
 		      				<div class="col-sm-12 text-left">
 		      					<label class="col-sm-4">Birthday (MM/DD/YYYY): </label>
 		      					<input class="col-sm-4" name = "birthday" type="text" value = "<?php echo $birthday; ?>" />
-		      					<p class="error"><?php ?></p>
+		      					<p class="error"><?php echo $birthday_err; ?></p>
 		      				</div>
 		      				<div class="col-sm-12 text-left">
 		      					<label class="col-sm-4">Email: </label>
