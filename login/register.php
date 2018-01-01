@@ -1,6 +1,20 @@
 <?php
-	//change path for linux you will have to use / instead of \\
-	require_once(__DIR__ . "/../include/database-connect.php");
+	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
+	{
+		//Start Session
+		require_once(__DIR__ . "\..\include\start_session.php");
+
+		//change path for linux you will have to use / instead of \\
+		require_once(__DIR__ . "\..\include\database-connect.php");
+	}
+	else
+	{
+		//Start Session
+		require_once(__DIR__ . "/../include/start_session.php");
+
+		//change path for linux you will have to use / instead of \\
+		require_once(__DIR__ . "/../include/database-connect.php");
+	}
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
@@ -92,8 +106,6 @@
 				$stmt->execute();
 				echo $conn->error;
 
-				//Set up Session Variables
-
 				//Go Home
 				header('Location: ../');
 			}
@@ -173,12 +185,12 @@
 		      				</div>
 		      				<div class="col-sm-12 text-left">
 		      					<label class="col-sm-4">Birthday (MM/DD/YYYY): </label>
-		      					<input class="col-sm-4" name = "birthday" type="text" value = "<?php echo $birthday; ?>" />
+		      					<input class="col-sm-4" name = "birthday" type="date" value = "<?php echo $birthday; ?>" />
 		      					<p class="error"><?php echo $birthday_err; ?></p>
 		      				</div>
 		      				<div class="col-sm-12 text-left">
 		      					<label class="col-sm-4">Email: </label>
-		      					<input class="col-sm-4" name = "email" type="text" value = "<?php echo $email; ?>" />
+		      					<input class="col-sm-4" name = "email" type="email" value = "<?php echo $email; ?>" />
 		      					<p class="error"><?php echo $email_err; ?></p>
 		      				</div>
 		      				<div class="col-sm-12 text-left">

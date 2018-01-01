@@ -1,3 +1,17 @@
+<?php 
+
+      if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
+      {
+        //Start Session
+        require_once(__DIR__ . "\..\include\start_session.php");
+      }
+      else
+      {
+        //Start Session
+        require_once(__DIR__ . "/../include/start_session.php");
+      } 
+?>
+
 <html lang="en">
 <head>
   <title>Phi Kappa Psi - About</title>

@@ -1,6 +1,21 @@
 <?php
-	//change path for linux you will have to use / instead of \\
-	require_once(__DIR__ . "/../include/database-connect.php");
+	
+	if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN')
+	{
+		//Start Session
+		require_once(__DIR__ . "\..\include\start_session.php");
+
+		//change path for linux you will have to use / instead of \\
+		require_once(__DIR__ . "\..\include\database-connect.php");
+	}
+	else
+	{
+		//Start Session
+		require_once(__DIR__ . "/../include/start_session.php");
+
+		//change path for linux you will have to use / instead of \\
+		require_once(__DIR__ . "/../include/database-connect.php");
+	}
 
 	if($_SERVER["REQUEST_METHOD"] == "POST")
 	{
@@ -27,6 +42,8 @@
 				if(password_verify($pass, $hash))
 				{
 					//Set up Session variables
+					$_SESSION["uid"] = $row["id"];
+					$_SESSION["username"] = $row["username"];
 					
 					//Go Home
 					header('Location: ../');
