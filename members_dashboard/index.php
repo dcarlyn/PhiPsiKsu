@@ -120,7 +120,7 @@
 
                 <h1 class="primary-font">Member Dashboard</h1>
 
-                <img src="https://pbs.twimg.com/profile_images/879718783908294657/46CEEU-s.jpg">
+                <img src="https://pbs.twimg.com/profile_images/879718783908294657/46CEEU-s.jpg" height="200" width="200">
 
                 <div class ="container-fluid col-sm-12">
 
@@ -138,7 +138,7 @@
 
                                         <div class="container-fluid participation-service">
                                                 <h1>Service Hours</h1>
-                                                <h2><a href = "service_log.php"><?php echo $hours; ?></a></h2>
+                                                <h2><a href = "service_log.php"><?php echo ($hours ? $hours : 0.00); ?></a></h2>
 
 
                                         </div>

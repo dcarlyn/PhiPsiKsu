@@ -74,7 +74,6 @@
           </div>
     
           <div class="col-sm-8 text-center main-content"> 
-              <h1>"</h1>
               <h2>
                 Where We've Been &amp Who We Are Today
               </h2>
@@ -103,7 +102,6 @@
 
               <p>To the fulfillment of these beliefs, of these ideals, in the noble perfection of Phi Kappa Psi, I pledge my life and my sacred honor.</p>
 
-              <h1>"</h1>
               <h1>From the Phi Kappa Psi National <a href="https://www.phikappapsi.com">Website</a></h1>
           </div>
 
