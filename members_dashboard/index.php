@@ -18,6 +18,7 @@
       //Getting Personal Data
       //Query
         $hours = 0.00;
+        $total_hours = 0.00;
                                                         
         $stmt = $conn->prepare("SELECT * FROM members WHERE id = ?");
 
@@ -48,6 +49,23 @@
         else
         {
                 $hours = 0.00;
+        }
+
+        $stmt->close();
+
+        $stmt = $conn->prepare("SELECT SUM(hours) AS Total_Hours FROM service_submissions");
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+                                                        
+        if($result->num_rows > 0)
+        {
+                $row = $result->fetch_assoc();
+                $total_hours = $row["Total_Hours"];
+        }
+        else
+        {
+                $total_hours = 0.00;
         }
 
         $stmt->close();
@@ -119,8 +137,14 @@
           <div class="col-sm-8 text-center main-content">
 
                 <h1 class="primary-font">Member Dashboard</h1>
+                <div class = "col-sm-12 container-fluid">
+                        <img src="https://pbs.twimg.com/profile_images/879718783908294657/46CEEU-s.jpg" height="200" width="200">
+                </div>
 
-                <img src="https://pbs.twimg.com/profile_images/879718783908294657/46CEEU-s.jpg" height="200" width="200">
+                <div class="col-sm-12 container-fluid">
+                        <h1>Total Chapter Service Hours (Spring 2018)</h1>
+                        <h3><?php echo ($total_hours ? $total_hours : 0.00); ?></h3>
+                </div>
 
                 <div class ="container-fluid col-sm-12">
 
