@@ -13,7 +13,7 @@
         include_once(__DIR__ . "/../include/start_session.php");
 
         /* Root Address */
-        $root_address = "http:// " . $_SERVER['SERVER_NAME'];
+        $root_address = "http://" . $_SERVER['SERVER_NAME'];
         //Include bootstrap
         require_once(__DIR__ . "/../include/include-bootstrap.php");
     }
