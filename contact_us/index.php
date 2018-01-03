@@ -34,6 +34,14 @@
 
   .tile{
     border: black solid 1px;
+    height: 600px;
+  }
+
+  .desc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
   }
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
@@ -68,16 +76,20 @@
           <div class="col-sm-8 text-center"> 
               <div class="col-sm-6 text-center tile">
                 <h3>President</h3>
-                <img src="AndrewOltmanns.jpg" height="300" width="200"><br>
-                <h4>Andrew Oltmanns</h4>
-                <h5>Email: aoltmann@kent.edu</h5>
+                <img style="margin-top: 50px;" src="AndrewOltmanns.jpg" height="300" width="300"><br>
+                <div class="desc">
+                  <h4>Andrew Oltmanns</h4>
+                  <h5>Email: aoltmann@kent.edu</h5>
+                </div>
               </div>
 
               <div class="col-sm-6 text-center tile">
                 <h3>Recruitment Chair</h3>
-                <img src="MattKing.jpg" height="300" width="200"><br>
-                <h4>Matthew King</h4>
-                <h5>Email: mking67@kent.edu</h5>
+                <img src="MattKing.jpg" height="400" width="300"><br>
+                <div class="desc">
+                  <h4>Matthew King</h4>
+                  <h5>Email: mking67@kent.edu</h5>
+                </div>
               </div>
           </div>
 
