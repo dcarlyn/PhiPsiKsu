@@ -103,7 +103,7 @@
 
 				$hash_password = password_hash($pass, PASSWORD_BCRYPT, $options);
 				echo $hash_password;
-				$stmt = $conn->prepare("INSERT INTO members (first_name, last_name, email, birthday, username, password) VALUES (?, ?, ?, ?, ?, ?)");
+				$stmt = $conn->prepare("INSERT INTO members (first_name, last_name, email, birthday, username, password, is_active) VALUES (?, ?, ?, ?, ?, ?, 1)");
 				$stmt->bind_param("ssssss", $first_name, $last_name, $email, $birthday, $username, $hash_password);
 				$stmt->execute();
 				echo $conn->error;
