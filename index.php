@@ -25,14 +25,23 @@
       font-size: 96px;
   }
 
-  .welcome-text{
-
+  .content{
+    height: 100%;
   }
 
+  .main-content{
+    background-color: white;
+  }
+
+  .all-content{
+    background-color: #f1f1f1;
+  }
+  
   .sidenav {
     padding-top: 20px;
     background-color: #f1f1f1;
     height: 100%;
+    min-height: 100%;
   }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
@@ -50,7 +59,7 @@
 <?php require_once("header/header.php"); ?>
 <!-- ===================HEADER========================== -->
   
-    <div class="container-fluid text-center">    
+    <div class="container-fluid text-center all-content">    
         <div class="row content">
     
           <div class="col-sm-2 sidenav">
@@ -61,9 +70,13 @@
             -->
           </div>
     
-          <div class="col-sm-8 text-center"> 
+          <div class="col-sm-8 text-center main-content"> 
               <h1 class = "col-sm-12 phi-kappa-psi-header-text">ΦΚΨ</h1>
               <p class = "welcome-text">Welcome to the soon to be Ohio Kappa Chapter! We are a social fraternity at Kent State University that strives to turn good men into great men. We pride ourselves on the great joy of serving other through our constant philanthropic and service efforts year round. If you are interested in joining, or simply want more information, please contact our president <a href="mailto: aoltmann@kent.edu">Andrew Oltmanns</a>.</p><hr>
+
+              <a class="twitter-timeline"  href="https://twitter.com/PhiPsiKentState" data-widget-id="693472765031137280">Tweets by @PhiPsiKentState</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+          
           </div>
 
           <div class="col-sm-2 sidenav">

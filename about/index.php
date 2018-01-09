@@ -39,13 +39,6 @@
     height: 100%;
     min-height: 100%;
   }
-    
-    .service_link{
-        background-color: darkgreen;
-        text-align: center;
-        border: 2px solid darkred;
-        margin-bottom: 10px;
-    }
 
 /* On small screens, set height to 'auto' for sidenav and grid */
 @media screen and (max-width: 767px) {
