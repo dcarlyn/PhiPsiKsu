@@ -53,7 +53,7 @@
 
         $stmt->close();
 
-        $stmt = $conn->prepare("SELECT SUM(hours) AS Total_Hours FROM service_submissions");
+        $stmt = $conn->prepare("SELECT SUM(hours) AS Total_Hours FROM service_submissions WHERE service_date >= '2018-01-01'");
         $stmt->execute();
 
         $result = $stmt->get_result();
