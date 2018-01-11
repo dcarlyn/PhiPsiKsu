@@ -25,8 +25,16 @@
       font-size: 96px;
   }
 
+  .header-img{
+    width: 100%;
+  }
+
   .content{
     height: 100%;
+  }
+
+  .welcome-text{
+    margin-top: 10px;
   }
 
   .main-content{
@@ -72,6 +80,8 @@
     
           <div class="col-sm-8 text-center main-content"> 
               <h1 class = "col-sm-12 phi-kappa-psi-header-text">ΦΚΨ</h1>
+              <img class = "header-img" src = "rushschedulespring2018.png" />
+
               <p class = "welcome-text">Welcome to the soon to be Ohio Kappa Chapter! We are a social fraternity at Kent State University that strives to turn good men into great men. We pride ourselves on the great joy of serving other through our constant philanthropic and service efforts year round. If you are interested in joining, or simply want more information, please contact our president <a href="mailto: aoltmann@kent.edu">Andrew Oltmanns</a>.</p><hr>
 
               <a class="twitter-timeline"  href="https://twitter.com/PhiPsiKentState" data-widget-id="693472765031137280">Tweets by @PhiPsiKentState</a>
