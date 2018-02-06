@@ -19,6 +19,7 @@
       //Query
         $hours = 0.00;
         $total_hours = 0.00;
+        $is_service_chair = false;
                                                         
         $stmt = $conn->prepare("SELECT * FROM members WHERE id = ?");
 
@@ -34,6 +35,22 @@
 
         $stmt->close();
 
+        //IS Service Chair
+        $stmt = $conn->prepare("SELECT * FROM committees INNER JOIN committee_chairmen ON committee_chairmen.committee = committees.id INNER JOIN terms ON terms.id = committee_chairmen.term WHERE committee_chairmen.chair = ? AND committees.name = 'Community Service' AND terms.is_current = 1");
+
+        $stmt->bind_param("i", $_SESSION["uid"]);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+                                                        
+        if($result->num_rows > 0)
+        {
+                $is_service_chair = true;
+        }
+
+        $stmt->close();
+
+        //Personal Hours
         $stmt = $conn->prepare("SELECT SUM(hours) AS Total_Hours FROM service_submissions WHERE user_id = ?");
 
         $stmt->bind_param("i", $_SESSION["uid"]);
@@ -53,6 +70,7 @@
 
         $stmt->close();
 
+        //Total Service Hours
         $stmt = $conn->prepare("SELECT SUM(hours) AS Total_Hours FROM service_submissions WHERE service_date >= '2018-01-01'");
         $stmt->execute();
 
@@ -143,7 +161,26 @@
 
                 <div class="col-sm-12 container-fluid">
                         <h1>Total Chapter Service Hours (Spring 2018)</h1>
-                        <h3><?php echo ($total_hours ? $total_hours : 0.00); ?></h3>
+                        <h3>
+
+                        <?php 
+                        
+                            if($is_service_chair)
+                            {
+                                echo "<a href = 'total_service_log.php'>";
+                            }
+
+                            echo ($total_hours ? $total_hours : 0.00);
+
+                            if($is_service_chair)
+                            {
+                                echo "</a>";
+                            }
+                            
+
+                        ?>
+                            
+                        </h3>
                 </div>
 
                 <div class ="container-fluid col-sm-12">
@@ -234,6 +271,7 @@
                                         <div class="container-fluid action-items-links">
 
                                                 <h3><a href="service_submission.php">Submit Service Hours</a></h3>
+                                                <h3><a href="https://docs.google.com/forms/d/e/1FAIpQLSdosFdKb0IWJUyQhipa4oOyx1vZf_N1HfvRPu9R_WLd0oSt4Q/viewform">Request Funds Form</a></h3>
                                                 <h3><a href="logout.php">Logout</a></h3>
 
                                                 <!--
