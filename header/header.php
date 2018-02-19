@@ -54,7 +54,7 @@ html, body{
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="logo" href="#"><img src ="http://www.phikappapsi.com/content/images/common/nLogo.png" height="50px" width="75px"></a>
+      <a class="logo" href="https://www.phikappapsi.com"><img src ="<?php echo $root_address . '/phipsilogo.gif'; ?>" height="50px" width="75px"></a>
     </div>
 
     <div class="collapse navbar-collapse" id="myNavbar">
