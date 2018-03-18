@@ -18,7 +18,7 @@
       //Getting Personal Data
       //Query
                                                         
-        $stmt = $conn->prepare("SELECT members.first_name, members.last_name, service_submissions.org_name, service_submissions.service_date, service_submissions.hours FROM service_submissions INNER JOIN members ON members.id = service_submissions.user_id ORDER BY service_submissions.service_date DESC");
+        $stmt = $conn->prepare("SELECT members.first_name, members.last_name, service_submissions.org_name, service_submissions.service_date, service_submissions.hours FROM service_submissions INNER JOIN members ON members.id = service_submissions.user_id ORDER BY service_submissions.id DESC");
 
         $stmt->bind_param("i", $_SESSION["uid"]);
         $stmt->execute();
