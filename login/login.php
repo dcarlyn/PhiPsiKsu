@@ -46,7 +46,7 @@
 					$_SESSION["username"] = $row["username"];
 					
 					//Go Home
-					header('Location: ../');
+					header('Location: ../members_dashboard/');
 				}
 				else
 				{

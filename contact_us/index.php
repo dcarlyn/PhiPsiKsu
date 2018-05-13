@@ -67,9 +67,8 @@
     
           <div class="col-sm-2 sidenav">
             <!--
-              <p><a href="#">Link</a></p>
-              <p><a href="#">Link</a></p>
-              <p><a href="#">Link</a></p>
+              Blank contact_us/index.php
+              Commit 2
             -->
           </div>
     
@@ -96,10 +95,8 @@
           <div class="col-sm-2 sidenav">
           
           <!--
-              <div class="well">
-              </div>
-              <div class="well">
-              </div>
+              Blank contact_us/index.php
+              Commit 2
           -->
 
           </div>
