@@ -94,10 +94,7 @@
           <div class="col-sm-2 sidenav">
           
           <!--
-              <div class="well">
-              </div>
-              <div class="well">
-              </div>
+              Blank
           -->
 
           </div>
