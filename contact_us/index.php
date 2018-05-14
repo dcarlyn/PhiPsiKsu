@@ -67,8 +67,6 @@
     
           <div class="col-sm-2 sidenav">
             <!--
-              Blank contact_us/index.php
-              Commit 2
             -->
           </div>
     
@@ -95,8 +93,6 @@
           <div class="col-sm-2 sidenav">
           
           <!--
-              Blank contact_us/index.php
-              Commit 2
           -->
 
           </div>

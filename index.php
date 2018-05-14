@@ -74,7 +74,6 @@
     
           <div class="col-sm-2 sidenav">
             <!--
-              Blank Commit 2
             -->
           </div>
     
@@ -92,7 +91,6 @@
           <div class="col-sm-2 sidenav">
           
           <!--
-              Blank
           -->
 
           </div>
