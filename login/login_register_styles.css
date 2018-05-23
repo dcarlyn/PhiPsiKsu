@@ -1,0 +1,18 @@
+.label {
+
+}
+
+.text-input{
+	border-radius: 5px;
+}
+
+.text-input:focus {
+	border-color: #355E3B;
+	border-width: 2px;
+	border-style: solid;
+}
+
+.label-input-pair {
+	margin: 5px;
+	padding: 10px;
+}

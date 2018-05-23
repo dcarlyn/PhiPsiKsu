@@ -81,6 +81,7 @@
 		<title>Phi Kappa Psi Login</title>
 		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="login_register_styles.css">
 	</head>
 
 	<style>
@@ -127,14 +128,14 @@
 
 		      		<div>
 		      			<form action="login.php" method="post">
-		      				<div class="col-sm-12 text-left">
+		      				<div class="label-input-pair col-sm-12 text-left">
 		      					<label class = "col-sm-4">Username: </label>
-		      					<input class = "col-sm-4" name = "username" type="text" value = "<?php echo $username; ?>" />
+		      					<input class = "text-input col-sm-4" name = "username" type="text" value = "<?php echo $username; ?>" />
 		      					<p class = "error"><?php echo $username_err; ?></p>
 		      				</div>
-		      				<div class="col-sm-12 text-left">
+		      				<div class="label-input-pair col-sm-12 text-left">
 		      					<label class = "col-sm-4">Password: </label>
-		      					<input class = "col-sm-4" name = "password" type="password" />
+		      					<input class = "text-input col-sm-4" name = "password" type="password" />
 		      					<p class = "error"><?php echo $password_err; ?></p>
 		      				</div>
 		      				<div class = "col-sm-12 text-left">
